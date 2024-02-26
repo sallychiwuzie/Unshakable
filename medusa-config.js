@@ -55,25 +55,26 @@ const plugins = [
 ];
 
 const modules = {
-  /*eventBus: {
+  eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
-      redisUrl: REDIS_URL
-    }
+      redisUrl: REDIS_URL,
+    },
   },
   cacheService: {
     resolve: "@medusajs/cache-redis",
     options: {
-      redisUrl: REDIS_URL
-    }
-  },*/
+      redisUrl: REDIS_URL,
+    },
+  },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
 const projectConfig = {
   redis_url: REDIS_URL,
-  store_cors: STORE_CORS,
   database_url: DATABASE_URL,
+  database_type: "postgres",
+  store_cors: STORE_CORS,
   admin_cors: ADMIN_CORS,
   jwtSecret: process.env.JWT_SECRET,
   cookieSecret: process.env.COOKIE_SECRET,
