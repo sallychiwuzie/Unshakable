@@ -5,7 +5,6 @@
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
   "keywords": [
-    "sqlite",
     "postgres",
     "typescript",
     "ecommerce",
