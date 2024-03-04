@@ -39,13 +39,13 @@ const plugins = [
       upload_dir: "uploads",
     },
   },
-  {
-    resolve: "@medusajs/admin",
-    /** @type {import('@medusajs/admin').PluginOptions} */
-    options: {
-      autoRebuild: true,
-    },
-  },
+  // {
+  //   resolve: "@medusajs/admin",
+  //   /** @type {import('@medusajs/admin').PluginOptions} */
+  //   options: {
+  //     autoRebuild: true,
+  //   },
+  // },
 ];
 
 const modules = {
