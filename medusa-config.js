@@ -49,8 +49,17 @@ const plugins = [
       secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
       cache_control: process.env.S3_CACHE_CONTROL,
       // optional
-      // download_file_duration: process.env.S3_DOWNLOAD_FILE_DURATION,
-      // prefix: process.env.S3_PREFIX,
+      download_file_duration: process.env.S3_DOWNLOAD_FILE_DURATION,
+      prefix: process.env.S3_PREFIX,
+    },
+  },
+  {
+    resolve: `medusa-payment-paypal`,
+    options: {
+      sandbox: process.env.PAYPAL_SANDBOX,
+      clientId: process.env.PAYPAL_CLIENT_ID,
+      clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+      authWebhookId: process.env.PAYPAL_AUTH_WEBHOOK_ID,
     },
   },
   // {
