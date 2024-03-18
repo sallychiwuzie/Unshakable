@@ -50,7 +50,6 @@ const plugins = [
       cache_control: process.env.S3_CACHE_CONTROL,
       // optional
       download_file_duration: process.env.S3_DOWNLOAD_FILE_DURATION,
-      prefix: process.env.S3_PREFIX,
     },
   },
   {
