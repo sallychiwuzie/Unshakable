@@ -5,6 +5,6 @@ import { Product as MedusaProduct } from '@medusajs/medusa';
 export class Product extends MedusaProduct {
 	@Column({ nullable: true })
 	gender: string;
-	@Column({ nullable: true })
+	@Column({ default: 1 })
 	external: boolean;
 }
