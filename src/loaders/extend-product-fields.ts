@@ -5,11 +5,11 @@ export default async function () {
 	imports.allowedStoreProductsFields = [
 		...imports.allowedStoreProductsFields,
 		'gender',
-		'external',
+		'is_external',
 	];
 	imports.defaultStoreProductsFields = [
 		...imports.defaultStoreProductsFields,
 		'gender',
-		'external',
+		'is_external',
 	];
 }
