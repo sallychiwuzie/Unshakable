@@ -10,6 +10,6 @@ export default async function () {
 	imports.defaultStoreProductsFields = [
 		...imports.defaultStoreProductsFields,
 		'gender',
-		'exernal',
+		'external',
 	];
 }
