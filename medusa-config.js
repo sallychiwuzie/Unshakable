@@ -81,10 +81,6 @@ const plugins = [
 							'external',
 						],
 					},
-					transformer: (product) => ({ 
-						id: product.id, 
-						// other attributes...
-					  }),
 				},
 			},
 		},
