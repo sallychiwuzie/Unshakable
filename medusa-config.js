@@ -22,7 +22,8 @@ try {
 } catch (e) {}
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS = process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001"
+const ADMIN_CORS =
+	process.env.ADMIN_CORS || 'http://localhost:7000,http://localhost:7001';
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS;
@@ -58,8 +59,8 @@ const plugins = [
 	{
 		resolve: `medusa-plugin-algolia`,
 		options: {
-      applicationId: process.env.ALGOLIA_APP_ID,
-      adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY,
+			applicationId: process.env.ALGOLIA_APP_ID,
+			adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY,
 			settings: {
 				products: {
 					indexSettings: {
@@ -75,11 +76,15 @@ const plugins = [
 							'options',
 							'collection_title',
 							'collection_handle',
-              				'images',
-              				'gender',
-              				'external'
+							'images',
+							'gender',
+							'external',
 						],
 					},
+					transformer: (product) => ({ 
+						id: product.id, 
+						// other attributes...
+					  }),
 				},
 			},
 		},
